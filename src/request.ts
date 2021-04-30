@@ -129,6 +129,7 @@ export class Request {
     } catch (e) {
       const isEmptyResponse = [202, 204].indexOf(response.status) > -1
       if (isEmptyResponse) return
+      console.log('a')
       throw new ResponseError(response, "invalid json", e)
     }
 
@@ -151,6 +152,7 @@ export class Request {
         throw new ResponseError(response, "record not found")
       } else {
         // Bad JSON, for instance an errors payload
+        console.log('b')
         throw new ResponseError(response, "invalid json")
       }
     }
