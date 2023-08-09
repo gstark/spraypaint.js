@@ -1,1 +1,1 @@
-export { isEmpty } from "lodash"
+export { isEmpty } from "lodash-es"
