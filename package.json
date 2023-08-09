@@ -9,7 +9,6 @@
   "homepage": "https://github.com/graphiti-api/spraypaint.js",
   "scripts": {
     "clean": "rimraf ./dist ./build ./coverage ./lib ./lib-esm",
-    "prebuild": "yarn run clean && yarn test:ci && yarn lint:ci",
     "build": "npm-run-all build:node build:es6 build:copy_shims build:umd build:umd:min",
     "build:node": "yarn run tsc -p ./tsconfig.node.json",
     "build:es6": "yarn run tsc -p ./tsconfig.lib.json",
